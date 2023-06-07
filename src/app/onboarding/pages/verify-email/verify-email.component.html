@@ -1,0 +1,36 @@
+<form
+  [formGroup]="verifyForm"
+  (ngSubmit)="handleVerifyCode()"
+  class="admin-form_1"
+>
+  <div class="login-head"><h2>Verify Email</h2></div>
+
+  <div class="verification-text">
+    <p>Enter six digit verification code sent on your registrered email</p>
+  </div>
+
+  <div class="login-alignment">
+    <div class="form-input-alignment">
+      <label for="">Verification Code*</label>
+      <input
+        type="text"
+        placeholder="Enter company code"
+        name="verify-code"
+        formControlName="verify_code"
+      />
+    </div>
+    <div
+      class="validation_msg"
+      *ngIf="verify_code && verify_code.invalid && verify_code.touched"
+    >
+      <span>Invalid Password</span>
+    </div>
+  </div>
+
+  <button type="submit" class="login-button" [disabled]="verifyForm.invalid">Continue</button>
+  <!-- <div routerLink="/reset-password" class="login-button"></div> -->
+
+  <div class="auth-return">
+    <p>Resend code:<span>00</span></p>
+  </div>
+</form>

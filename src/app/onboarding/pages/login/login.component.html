@@ -1,0 +1,71 @@
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class="admin-form_1">
+  <div class="login-head"><h2>Login</h2></div>
+
+  <div class="login-alignment">
+    <div class="form-input-alignment">
+      <label for="">Company Code*</label>
+      <input
+        type="text"
+        placeholder="Enter company code"
+        name="company code"
+        formControlName="company_code"
+      />
+    </div>
+    <div
+      class="validation_msg"
+      *ngIf="company_code && company_code.invalid && company_code.touched"
+    >
+      <span> Invalid company code</span>
+    </div>
+  </div>
+
+  <div class="login-alignment">
+    <div class="form-input-alignment">
+      <label for="">Email/Employee ID*</label>
+      <input
+        type="text"
+        placeholder="Enter email/employee ID"
+        name="email"
+        formControlName="company_email"
+      />
+    </div>
+    <div
+      class="validation_msg"
+      *ngIf="commpany_email && commpany_email.invalid && commpany_email.touched"
+    >
+      <span>Invalid email/employee id</span>
+    </div>
+  </div>
+
+  <div class="login-alignment">
+    <div class="form-input-alignment">
+      <label for="">Password*</label>
+      <input
+        type="password"
+        placeholder="Enter password"
+        name="password"
+        formControlName="password"
+      />
+    </div>
+    <div
+      class="validation_msg"
+      *ngIf="password && password.invalid && password.touched"
+    >
+      <span>Invalid Password</span>
+    </div>
+  </div>
+
+  <div class="login-link">
+    <div class="login-check">
+      <input type="checkbox" />
+      <span>Remember me</span>
+    </div>
+    <div class="login-forget">
+      <span routerLink="/forgot-password">Forgot Password</span>
+    </div>
+  </div>
+
+  <button class="login-button" [disabled]="loginForm.invalid">Login</button>
+  <!-- <div  class="login-button">
+  </div> -->
+</form>
