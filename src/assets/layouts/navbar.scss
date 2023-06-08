@@ -1,0 +1,82 @@
+// @import "../scss/abstract/variables.scss";
+
+.nav-container {
+  height: 70px;
+  width: 100%;
+  background-color: $primaryColor;
+  // position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-menuicon {
+  display: flex;
+  align-items: center;
+  .menu-icon {
+    width: 40px;
+    height: 36px;
+    // border: 1px solid black;
+    // margin-top: 31px;
+    margin-left: 16px;
+    .menu-icon-svg {
+      background-image: url("../icons/ButtonMenu\(EDE3\).svg");
+      height: 100%;
+      background-size: 100% 100%;
+    }
+  }
+
+  .nav-logo {
+    width: 80px;
+    height: 52px;
+    // border: 1px solid black;
+    margin-left: 28px;
+    .nav-logo-img {
+      background-image: url("../icons/Logo_new.svg");
+      height: 100%;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .profile-logo {
+    height: 30px;
+    width: 30px;
+    border: 2px solid $lightTertiary;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0,0.25));
+    .profile-image{
+        background-image: url("../image/profile-logo-image.jpg");
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+  }
+  .profile-name {
+    color: $lightTertiary;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 12px;
+  }
+  .profile-dropdown {
+    height: 8px;
+    width: 14px;
+    margin-right: 48px;
+    margin-left: 23px;
+    // border: 1px solid black;
+    .profile-dropdown-svg {
+      background-image: url("../icons/Vector.svg");
+      height: 100%;
+      background-size: 100% 100%;
+    }
+  }
+}

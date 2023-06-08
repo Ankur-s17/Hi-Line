@@ -9,10 +9,10 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 const routes: Routes = [
   {
     path: '',
-    component: AdminAuthComponent,  
+    component: AdminAuthComponent,
     children: [
       { path: 'login', component: LoginComponent },
-      {path: '', redirectTo: '/login', pathMatch:'full' }, //redirect to primary component
+      { path: '', redirectTo: '/login', pathMatch: 'full' }, //redirect to primary page
       { path: 'forgot-password', component: ForgetPasswordComponent },
       { path: 'verify-email', component: VerifyEmailComponent },
       { path: 'reset-password', component: ResetPasswordComponent },

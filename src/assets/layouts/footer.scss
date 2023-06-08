@@ -1,0 +1,38 @@
+.footer-container {
+  height: 70px;
+  width: 100%;
+  background-color: $mediumHighLine;
+  // position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer-icon {
+    width: 140.15px;
+    height: 48px;
+    // border: 1px solid black;
+    display: flex;
+    align-items: center;
+    .footer-icon-svg {
+      background-image: url("../icons/HiLine-Logo-White\ 1.svg");
+      height: 100%;
+      width: 100%;
+      background-size: 100% 100%;
+    }
+  }
+  .footer-desp {
+    font-weight: 400;
+    font-size: 16px;
+    p{
+        color: $lightTertiary;
+        margin-left: 44.85px;
+        letter-spacing: -0.016em;
+    }
+  }
+}
