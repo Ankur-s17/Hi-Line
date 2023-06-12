@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "route": "/inventory",
+    "active": "/assets/sidenav_icons/active_inventory.svg",
+    "icon": "/assets/sidenav_icons/inactive_inventory.svg"
+  },
+  {
+    "id": 2,
+    "route": "/users",
+    "active": "/assets/sidenav_icons/Active_Group.svg",
+    "icon": "/assets/sidenav_icons/Inactive_Group.svg"
+  },
+  {
+    "id": 3,
+    "route": "/price",
+    "active": "/assets/sidenav_icons/Active_Price.svg",
+    "icon": "/assets/sidenav_icons/Inactive_Price.svg"
+  },
+  {
+    "id": 4,
+    "route": "/area",
+    "active": "/assets/sidenav_icons/Active_Area.svg",
+    "icon": "/assets/sidenav_icons/Inactive_Area.svg"
+  },
+  {
+    "id": 5,
+    "route": "/tools",
+    "active": "/assets/sidenav_icons/Active_Parts.svg",
+    "icon": "/assets/sidenav_icons/Inactive_Parts.svg"
+  }
+]

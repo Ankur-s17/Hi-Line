@@ -1,4 +1,5 @@
 @import "../scss/abstract/variables.scss";
+@import "../scss/abstract/mixins.scss";
 
 .admin-form_1 {
   width: 428px;
@@ -7,15 +8,12 @@
   background: $lightTertiary;
   border-radius: 12px;
   box-shadow: 0px 0px 16px rgba(0, 83, 159, 0.2);
-  padding: 10px;
+  padding: 28px 26px;
 
   .login-alignment {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include displayCenter3;
     // border:;
     height: 80px;
-    // border: 1px solid black;
     flex-direction: column;
     padding: 9px;
     .form-input-alignment {
@@ -43,6 +41,7 @@
   font-weight: 400;
   font-size: 32px;
   margin-bottom: 18px;
+  // padding: 10px;
 }
 
 .login-link {

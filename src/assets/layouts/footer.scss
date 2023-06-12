@@ -1,8 +1,8 @@
 .footer-container {
-  height: 70px;
+  height: 55px;
   width: 100%;
   background-color: $mediumHighLine;
-  // position: fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
@@ -14,8 +14,8 @@
   align-items: center;
   justify-content: center;
   .footer-icon {
-    width: 140.15px;
-    height: 48px;
+    width: 130.15px;
+    height: 40px;
     // border: 1px solid black;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
   }
   .footer-desp {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     p{
         color: $lightTertiary;
         margin-left: 44.85px;

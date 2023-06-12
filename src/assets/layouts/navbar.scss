@@ -1,19 +1,21 @@
 // @import "../scss/abstract/variables.scss";
 
 .nav-container {
-  height: 70px;
-  width: 100%;
   background-color: $primaryColor;
-  // position: fixed;
+  height: 65px;
+  width: 100%;
+  position: fixed;
   left: 0;
   top: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .logo-menuicon {
   display: flex;
   align-items: center;
+
   .menu-icon {
     width: 40px;
     height: 36px;

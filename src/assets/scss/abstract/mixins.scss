@@ -1,0 +1,10 @@
+@mixin displayCenter3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin heightWidth100P {
+  width: 100%;
+  height: 100vh;
+}

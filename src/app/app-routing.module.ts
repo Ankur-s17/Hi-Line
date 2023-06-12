@@ -7,6 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./onboarding/onboarding.module').then((m) => m.OnboardingModule),
   },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./layout/layout.module').then(
+        (m) => m.LayoutModule
+      ),
+  },
 ];
 
 @NgModule({

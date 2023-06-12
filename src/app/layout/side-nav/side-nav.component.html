@@ -1,24 +1,15 @@
 <div class="side-nav-container">
   <div class="side_nav-icon_cont">
-    <div class="icon_padding">
-      <div class="side-nav-icon">
-        <div class="icon-logo"></div>
-      </div>
-    </div>
-    <div class="side-nav-icon">
-      <div class="icon-logo"></div>
-    </div>
-
-    <div class="side-nav-icon">
-      <div class="icon-logo"></div>
-    </div>
-
-    <div class="side-nav-icon">
-      <div class="icon-logo"></div>
-    </div>
-
-    <div class="side-nav-icon">
-      <div class="icon-logo"></div>
+    <div
+      class="side-nav-icon"
+      *ngFor="let item of sideNavMenu; let i = index"
+      (click)="activeIcon(i)"
+      [routerLink]="item.route"  
+    >
+      <img
+        class="icon-logo"
+        [src]="item.active"
+      />
     </div>
   </div>
 </div>

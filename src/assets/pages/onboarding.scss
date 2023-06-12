@@ -1,19 +1,19 @@
 @import "../scss/abstract/variables.scss";
+@import "../scss/abstract/mixins.scss";
 
 .admin-auth-container {
+  @include heightWidth100P;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
   .auth-bg-image {
     position: absolute;
     width: 100%;
     height: 100%;
     background-image: url("../image/Home-page-background-1.png");
     background-color: $primaryColor;
-    background-repeat: no-repeat;  
-    // background-size: 100% 100%;
-    background-position: center;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-size: 100% 100%;
   }
 }
 
@@ -23,26 +23,17 @@
 
 .auth-icon-wrapper {
   flex: 1;
-  // background-color: cyan;
-  // position: relative;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include displayCenter3;
   flex-direction: column;
-  // margin-bottom: 50px;
-  // padding-left: 105px;
   .auth-icon {
     background-image: url("../icons/Logo_new.svg");
     width: 509.13px;
     height: 307px;
-    // padding: 50px;
     margin-bottom: 50px;
   }
   .auth-footer {
     display: flex;
-    // align-items: center;
-    // margin-top: 30px;
     p {
       color: $lightTertiary;
       font-weight: 400;
@@ -55,8 +46,5 @@
 .auth-form {
   height: 100vh;
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // background-color: red;
+  @include displayCenter3;
 }

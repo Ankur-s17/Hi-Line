@@ -4,22 +4,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OnboardingModule } from './onboarding/onboarding.module';
 import { LayoutModule } from './layout/layout.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MainSectionsModule } from './main-sections/main-sections.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  
+  declarations: [AppComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     OnboardingModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule,
+    MainSectionsModule
   ],
 
   providers: [],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
