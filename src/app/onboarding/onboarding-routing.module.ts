@@ -12,7 +12,7 @@ const routes: Routes = [
     component: AdminAuthComponent,
     children: [
       { path: 'login', component: LoginComponent },
-      { path: '', redirectTo: '/login', pathMatch: 'full' }, //redirect to primary page
+      { path: '', redirectTo: 'login', pathMatch: 'full' }, //redirect to primary page
       { path: 'forgot-password', component: ForgetPasswordComponent },
       { path: 'verify-email', component: VerifyEmailComponent },
       { path: 'reset-password', component: ResetPasswordComponent },

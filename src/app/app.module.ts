@@ -6,6 +6,7 @@ import { OnboardingModule } from './onboarding/onboarding.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MainSectionsModule } from './main-sections/main-sections.module';
+import { InventoryModule } from './inventory/inventory.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,8 @@ import { MainSectionsModule } from './main-sections/main-sections.module';
     OnboardingModule,
     LayoutModule,
     HttpClientModule,
-    MainSectionsModule
+    MainSectionsModule,
+    InventoryModule
   ],
 
   providers: [],

@@ -21,7 +21,7 @@ export class LoginComponent {
 
   handleLogin() {
     console.log(this.loginForm.value);
-    this.route.navigate(['/admin'])
+    this.route.navigate(['/inventory'])
   }
 
   get company_code() {

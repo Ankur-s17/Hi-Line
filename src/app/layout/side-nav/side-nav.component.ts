@@ -8,6 +8,7 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 })
 export class SideNavComponent implements OnInit {
   sideNavMenu: any;
+  currentUrl: number = 1;
 
   ngOnInit(): void {
     this.getSideNav();
@@ -24,8 +25,6 @@ export class SideNavComponent implements OnInit {
   }
 
   activeIcon(index: number) {
-    console.log(index);
-    
-
+    this.currentUrl = index;
   }
 }

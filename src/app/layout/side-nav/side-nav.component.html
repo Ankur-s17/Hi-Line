@@ -3,13 +3,16 @@
     <div
       class="side-nav-icon"
       *ngFor="let item of sideNavMenu; let i = index"
-      (click)="activeIcon(i)"
-      [routerLink]="item.route"  
+      (click)="activeIcon(i + 1)"
+      [routerLink]="item.route"
+      [routerLinkActive]="'active'"
     >
+      <!-- [ngClass]="'item.icon'" -->
       <img
         class="icon-logo"
-        [src]="item.active"
+        [src]="item.id !== currentUrl ? item.icon : item.active"
       />
+      <!-- {{ item.id }} -->
     </div>
   </div>
 </div>

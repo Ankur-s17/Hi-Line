@@ -8,12 +8,15 @@ const routes: Routes = [
       import('./onboarding/onboarding.module').then((m) => m.OnboardingModule),
   },
   {
-    path: 'admin',
+    path: '',
     loadChildren: () =>
-      import('./layout/layout.module').then(
-        (m) => m.LayoutModule
-      ),
+      import('./layout/layout.module').then((m) => m.LayoutModule),
   },
+  // {
+  //   path: '',
+  //   loadChildren: () =>
+  //     import('./inventory/inventory.module').then((m) => m.InventoryModule),
+  // },
 ];
 
 @NgModule({

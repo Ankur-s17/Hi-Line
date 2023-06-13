@@ -6,13 +6,14 @@ import { PricingComponent } from './pricing/pricing.component';
 import { AreaComponent } from './area/area.component';
 import { ToolsComponent } from './tools/tools.component';
 import { CommonComponent } from './common/common.component';
+import { MainComponent } from '../layout/main/main.component';
 
 const routes: Routes = [
   {
     path: '',
-    component:CommonComponent,
+    component: CommonComponent,
     children: [
-      { path: '', component: InventoryComponent },
+      { path: 'inventory', component: InventoryComponent },
       { path: 'users', component: UsersComponent },
       { path: 'price', component: PricingComponent },
       { path: 'area', component: AreaComponent },

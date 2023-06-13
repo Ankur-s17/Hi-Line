@@ -1,0 +1,19 @@
+<div class="tabs_container">
+  <ul>
+    <li *ngFor="let tab of tabsList">
+      <a (click)="showTabComponent(tab)">{{ tab }}</a>
+    </li>
+  </ul>
+</div>
+
+<ng-container *ngIf="selectedTab === 'inventory log'">
+    <app-log></app-log>
+</ng-container>
+
+<ng-container *ngIf="selectedTab === 'add inventory'">
+    <app-add></app-add>
+</ng-container>
+
+<ng-container *ngIf="selectedTab === 'return inventory'">
+    <app-return></app-return>
+</ng-container>

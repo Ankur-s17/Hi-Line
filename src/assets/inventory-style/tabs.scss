@@ -1,0 +1,12 @@
+.tabs_container {
+  ul {
+    display: flex;
+    li {
+      padding: 10px;
+      list-style-type: none;
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}
