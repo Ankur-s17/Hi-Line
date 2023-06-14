@@ -7,13 +7,6 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      // {
-      //   path: '',
-      //   loadChildren: () =>
-      //     import('../main-sections/main-sections.module').then(
-      //       (m) => m.MainSectionsModule
-      //     ),
-      // },
       {
         path: '',
         loadChildren: () =>

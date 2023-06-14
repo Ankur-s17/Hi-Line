@@ -26,12 +26,12 @@
         type="text"
         placeholder="Enter email/employee ID"
         name="email"
-        formControlName="company_email"
+        formControlName="email"
       />
     </div>
     <div
       class="validation_msg"
-      *ngIf="commpany_email && commpany_email.invalid && commpany_email.touched"
+      *ngIf="email && email.invalid && email.touched"
     >
       <span>Invalid email/employee id</span>
     </div>
