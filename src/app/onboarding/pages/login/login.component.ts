@@ -25,13 +25,15 @@ export class LoginComponent {
     ]),
   });
 
-  // Login function 
+  // Login function
   handleLogin() {
-    // calling login service and getting access token 
+    // calling login service and getting access token
     this.loginService.onLogin(this.loginForm.value).subscribe((res) => {
       // debugger
       console.log('response', res);
-      localStorage.setItem('token', res.data.access_token);
+      if (res.response_code === 200) {
+        localStorage.setItem('token', res.data.access_token);
+      }
     });
     this.route.navigate(['/inventory']);
   }
