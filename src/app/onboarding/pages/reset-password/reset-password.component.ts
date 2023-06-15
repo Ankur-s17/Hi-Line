@@ -13,10 +13,14 @@ export class ResetPasswordComponent {
     new_password: new FormControl('', [Validators.required]),
     cnfm_new_password: new FormControl('', [Validators.required]),
   });
+
+  // Reset Password Function
   resetPassword() {
     console.log(this.resetPasswordForm.value);
     this.route.navigate(['/']);
   }
+
+  // reset-password getters function
   get new_password() {
     return this.resetPasswordForm.get('new_password');
   }

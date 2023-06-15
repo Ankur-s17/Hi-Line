@@ -25,8 +25,9 @@ export class LoginComponent {
     ]),
   });
 
+  // Login function 
   handleLogin() {
-    // console.log(this.loginForm.value);
+    // calling login service and getting access token 
     this.loginService.onLogin(this.loginForm.value).subscribe((res) => {
       // debugger
       console.log('response', res);
@@ -35,6 +36,7 @@ export class LoginComponent {
     this.route.navigate(['/inventory']);
   }
 
+  // Login getters function
   get company_code() {
     return this.loginForm.get('company_code');
   }

@@ -7,6 +7,8 @@ import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MainSectionsModule } from './main-sections/main-sections.module';
 import { InventoryModule } from './inventory/inventory.module';
+import { SharedModule } from './shared/shared.module';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,10 +20,16 @@ import { InventoryModule } from './inventory/inventory.module';
     LayoutModule,
     HttpClientModule,
     MainSectionsModule,
-    InventoryModule
+    InventoryModule,
+    SharedModule,
   ],
 
-  providers: [],
+  providers: [
+    {
+      provide: 'API_URL',
+      useValue: environment.loginApi
+    }
+  ],
 
   bootstrap: [AppComponent],
 })

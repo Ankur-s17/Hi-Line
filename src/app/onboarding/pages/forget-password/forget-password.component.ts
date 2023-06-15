@@ -14,11 +14,13 @@ export class ForgetPasswordComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
   });
 
+  // Forgot password function
   handleForgetPassword() {
     console.log(this.loginForm.value);
     this.route.navigate(['/verify-email'])
   }
  
+  // Forgot password getters function
   get company_code() {
     return this.loginForm.get('company_code');
   }
