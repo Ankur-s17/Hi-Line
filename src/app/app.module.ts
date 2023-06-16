@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { OnboardingModule } from './onboarding/onboarding.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MainSectionsModule } from './main-sections/main-sections.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { SharedModule } from './shared/shared.module';
 import { environment } from '../environments/environment';
@@ -21,7 +20,6 @@ import { PricingModule } from './pricing/pricing.module';
     OnboardingModule,
     LayoutModule,
     HttpClientModule,
-    MainSectionsModule,
     InventoryModule,
     SharedModule,
     UserManagementModule,
