@@ -7,25 +7,25 @@
   },
   {
     "id": 2,
-    "route": "/users",
+    "route": "/user-management",
     "active": "/assets/sidenav_icons/Active_Group.svg",
     "icon": "/assets/sidenav_icons/Inactive_Group.svg"
   },
   {
     "id": 3,
-    "route": "/price",
+    "route": "/price-management",
     "active": "/assets/sidenav_icons/Active_Price.svg",
     "icon": "/assets/sidenav_icons/Inactive_Price.svg"
   },
   {
     "id": 4,
-    "route": "/area",
+    "route": "/area-management",
     "active": "/assets/sidenav_icons/Active_Area.svg",
     "icon": "/assets/sidenav_icons/Inactive_Area.svg"
   },
   {
     "id": 5,
-    "route": "/tools",
+    "route": "/tools-management",
     "active": "/assets/sidenav_icons/Active_Parts.svg",
     "icon": "/assets/sidenav_icons/Inactive_Parts.svg"
   }

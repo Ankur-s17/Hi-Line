@@ -3,25 +3,104 @@
     <h5>Job Numbers</h5>
   </div>
   <div class="log-right">
-    <app-search ></app-search>
+    <app-search></app-search>
     <button>download data <span class="download_dropdown"></span></button>
   </div>
 </div>
 
 <table class="data_table">
   <thead class="table_head">
-    <tr>
-      <th style="border-left: 0"><input type="checkbox" />Job#</th>
+    <!-- <tr> -->
+      <th style="border-left: 0"><div class="flex_thead"><input type="checkbox" />Job# <div class="sort_up_down"></div></div></th>
       <th>Job Description</th>
-      <th>Data</th>
-      <th>Total Quantity</th>
-      <th>Invoiced</th>
+      <th><div class="flex_thead">Date <div class="sort_up_down"></div></div></th>
+      <th><div class="flex_thead">Total Quantity <div class="sort_up_down"></div></div></th>
+      <th><div class="flex_thead">Invoiced <div class="sort_up_down"></div></div></th>
       <th style="border-right: 0">Actions</th>
-    </tr>
+    <!-- </tr> -->
   </thead>
-  <tbody>
+  <tbody class="table_body">
     <tr>
+      <td><div class="flex_tbody"><input type="checkbox" />12345</div></td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td><div class="flex_tbody">open <div class="dropdown"></div></div></td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
+    </tr>
+
+
+     <tr>
       <td><input type="checkbox" />12345</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td>open</td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
+    </tr>
+
+     <tr>
+      <td><input type="checkbox" />12345</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td>open</td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
+    </tr>
+
+
+     <tr>
+      <td><input type="checkbox" />12345</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td>open</td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
+    </tr>
+
+
+
+     <tr>
+      <td><input type="checkbox" />12345</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td>open</td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
+    </tr>
+
+
+     <tr>
+      <td><input type="checkbox" />12345</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+      <td>16/06/23</td>
+      <td>20</td>
+      <td>open</td>
+      <td><div class="actions">
+        <div class="print"></div>
+        <div class="edit"></div>
+        <div class="delete"></div>
+      </div></td>
     </tr>
   </tbody>
 </table>

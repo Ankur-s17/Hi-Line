@@ -9,6 +9,8 @@ import { MainSectionsModule } from './main-sections/main-sections.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { SharedModule } from './shared/shared.module';
 import { environment } from '../environments/environment';
+import { UserManagementModule } from './user-management/user-management.module';
+import { PricingModule } from './pricing/pricing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +24,8 @@ import { environment } from '../environments/environment';
     MainSectionsModule,
     InventoryModule,
     SharedModule,
+    UserManagementModule,
+    PricingModule
   ],
 
   providers: [

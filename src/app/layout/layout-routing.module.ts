@@ -8,9 +8,33 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: '',  
+        path: '',
         loadChildren: () =>
-          import('../inventory/inventory.module').then((m) => m.InventoryModule),
+          import('../inventory/inventory.module').then(
+            (m) => m.InventoryModule
+          ),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../user-management/user-management.module').then(
+            (m) => m.UserManagementModule
+          ),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../pricing/pricing.module').then((m) => m.PricingModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../area/area.module').then((m) => m.AreaModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../tools/tools.module').then((m) => m.ToolsModule),
       },
     ],
   },

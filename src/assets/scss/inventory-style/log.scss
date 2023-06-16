@@ -1,0 +1,117 @@
+.log_top_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.log_left {
+  h5 {
+    font-size: 16px;
+    opacity: 0.5;
+    font-weight: 550;
+  }
+}
+
+.log-right {
+  display: flex;
+  input {
+    margin-right: 25px;
+    width: 250px;
+    background: #ffffff;
+    border: 1px solid #231f20;
+    height: 34px;
+    color: #d0c9d6;
+    font-size: 14px;
+    text-indent: 12px;
+    border-radius: 18px;
+    outline: none;
+  }
+  button {
+    width: 190px;
+    height: 33px;
+    border-radius: 8px;
+    background: #00539f;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    .download_dropdown {
+      background-image: url("../../icons/Dropdown\ arrow\ \(1\).png");
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.data_table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-right: 23px;
+  .table_head {
+    th {
+      border: 1.5px solid #c0c0c0;
+      font-weight: 400;
+      color: $mediumNeutral;
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .flex_thead {
+      @include tableHead;
+      .sort_up_down {
+        height: 10px;
+        width: 5.7px;
+        background-size: 100% 100%;
+        background-image: url("../../icons/Sort\ Up\ &\ Down.svg");
+      }
+    }
+  }
+
+  .table_body {
+    .flex_tbody {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      input {
+        height: 15px;
+        width: 15px;
+      }
+    }
+    .dropdown {
+      height: 7px;
+      width: 12px;
+      background-size: 100% 100%;
+      background-image: url("../../icons/Dropdown\ arrow\ \(1\).svg");
+    }
+    td {
+      font-weight: 400;
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
+tr:nth-child(odd) {
+  background-color: $mediumTertiary;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  .print {
+    @include tableActions;
+    background-image: url("../../icons/Print.svg");
+  }
+  .edit {
+    @include tableActions;
+    background-image: url("../../icons/Edit.svg");
+  }
+  .delete {
+    @include tableActions;
+    background-image: url("../../icons/Delete.svg");
+  }
+}

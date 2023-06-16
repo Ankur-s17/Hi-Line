@@ -8,3 +8,15 @@
   width: 100%;
   height: 100vh;
 }
+
+@mixin tableActions {
+  height: 15px;
+  width: 15px;
+  background-size: 100% 100%;
+}
+
+@mixin tableHead {
+  display: flex;
+  align-items: center;
+  gap: 7.97px;
+}
