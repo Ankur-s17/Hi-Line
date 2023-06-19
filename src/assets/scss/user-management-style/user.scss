@@ -1,0 +1,84 @@
+@import "../abstract/mixins.scss";
+
+.user-manage {
+  margin: 80px 23px 18px 80px;
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.0145455em;
+    margin-bottom: 18px;
+  }
+}
+
+.profile-logo {
+  @include profileLogo;
+  .profile-image {
+    @include profileIcon;
+  }
+}
+
+.visibility {
+  width: 22.45px;
+  height: 13.37px;
+  .visibility_icon {
+    background-image: url("../../icons/hide.svg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.flex_tbody {
+  span {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.reset_color {
+  color: $secondaryColor;
+}
+.toggle_btn {
+  input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    -webkit-appearance: none;
+    appearance: none;
+    // background: red;
+    background-color: lightgray;
+    outline: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.5s;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    margin: 4px 3px; 
+    
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked::before {
+      align-items: center;
+    transform: translateX(100%);
+    background: #fff;
+  }
+  input[type="checkbox"]:checked {
+    background: #27AE60;
+  }
+}
