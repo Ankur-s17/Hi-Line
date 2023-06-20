@@ -37,3 +37,29 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin dropdown {
+  height: 8px;
+  width: 14px;
+  padding-left: 10px;
+  background-size: 100% 100%;
+  background-image: url("../../icons/Dropdown\ arrow\ \(1\).svg");
+}
+
+@mixin add_button {
+  button {
+    // height: 37px;
+    background: $secondaryColor;
+    color: $lightTertiary;
+    border-radius: 8px;
+    border: none;
+    padding: 9px 33px;
+    // width: 98px;
+    height: 37px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

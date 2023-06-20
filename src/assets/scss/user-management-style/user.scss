@@ -4,7 +4,7 @@
   margin: 80px 23px 18px 80px;
   h3 {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 0.0145455em;
     margin-bottom: 18px;
   }
@@ -47,7 +47,6 @@
     height: 24px;
     -webkit-appearance: none;
     appearance: none;
-    // background: red;
     background-color: lightgray;
     outline: none;
     border-radius: 2rem;
@@ -69,16 +68,29 @@
     border-radius: 50%;
     background: #fff;
     display: flex;
-    margin: 4px 3px; 
-    
+    margin: 4px 3px;
     transition: 0.5s;
-}
-input[type="checkbox"]:checked::before {
-      align-items: center;
+  }
+  input[type="checkbox"]:checked::before {
+    align-items: center;
     transform: translateX(100%);
     background: #fff;
   }
   input[type="checkbox"]:checked {
-    background: #27AE60;
+    background: #27ae60;
+  }
+}
+
+.user-add_btn {
+  margin-top: 16px;
+  button {
+    background-color: $secondaryColor;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: $lightTertiary;
+    padding: 9px 33px;
+    cursor: pointer;
   }
 }

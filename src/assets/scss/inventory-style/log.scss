@@ -83,11 +83,7 @@
       }
     }
     .dropdown {
-      height: 8px;
-      width: 14px;
-      padding-left: 10px;
-      background-size: 100% 100%;
-      background-image: url("../../icons/Dropdown\ arrow\ \(1\).svg");
+      @include dropdown;
     }
     td {
       font-weight: 400;
@@ -102,7 +98,7 @@ tr:nth-child(odd) {
 
 .actions {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   // justify-content: space-between;
   .print {
     @include tableActions;

@@ -1,0 +1,26 @@
+.pricing_container {
+  margin: 90px 23px 0px 80px;
+}
+.pricing_head_flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.pricing_right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  .dropdown {
+    @include dropdown;
+  }
+}
+
+.pricing_footer {
+  display: flex;
+  gap: 30px;
+  .pricing_buttons {
+    @include add_button;
+    margin-top: 20px;
+  }
+}

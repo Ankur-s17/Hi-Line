@@ -23,7 +23,7 @@ import { PricingModule } from './pricing/pricing.module';
     InventoryModule,
     SharedModule,
     UserManagementModule,
-    PricingModule
+    PricingModule,
   ],
 
   providers: [

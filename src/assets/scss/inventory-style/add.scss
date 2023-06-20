@@ -30,23 +30,12 @@
     }
   }
 }
-.inventory_button {
-  margin-top: 40px;
+.add_button {
+  @include add_button;
   display: flex;
   justify-content: end;
+  margin-top: 40px;
   button {
-    height: 37px;
-    background: $secondaryColor;
-    color: $lightTertiary;
-    border-radius: 8px;
-    border: none;
-    width: 98px;
-    height: 37px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    text-transform: uppercase;
     opacity: 0.5;
   }
 }
