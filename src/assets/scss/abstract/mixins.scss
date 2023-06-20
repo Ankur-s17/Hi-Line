@@ -48,13 +48,11 @@
 
 @mixin add_button {
   button {
-    // height: 37px;
     background: $secondaryColor;
     color: $lightTertiary;
     border-radius: 8px;
     border: none;
     padding: 9px 33px;
-    // width: 98px;
     height: 37px;
     font-weight: 700;
     font-size: 16px;
