@@ -1,0 +1,45 @@
+.delete_modal_container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .delete_modal_box {
+    padding: 32px 52px;
+    background: $lightTertiary;
+    border: 1px solid #c0c0c0;
+    box-shadow: 0px 4px 4px rgba(192, 192, 192, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .delete_warning {
+      padding-bottom: 16px;
+      p {
+        width: 251px;
+      }
+    }
+    .delete_actions {
+      display: flex;
+      gap: 32px;
+      button {
+        width: 131px;
+        height: 38px;
+      }
+    }
+  }
+}
+.cancel_btn {
+  border: 2px solid $secondaryColor !important;
+  background-color: $lightTertiary !important;
+  color: $secondaryColor !important;
+  font-weight: 700 !important;
+}
