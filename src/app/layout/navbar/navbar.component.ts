@@ -8,15 +8,18 @@ import { DataSharingService } from 'src/app/services/data-sharing.service';
 })
 export class NavbarComponent implements OnInit {
   adminName: any;
+  showDropDownBanner: boolean = false;
 
   constructor(private dataSharingService: DataSharingService) {}
 
   ngOnInit(): void {
-    this.dataSharingService.getData().subscribe(name => {
-      console.log("sevice name",name);
+    this.dataSharingService.getData().subscribe((name) => {
+      console.log('sevice name', name);
       this.adminName = name;
-      console.log("hello ",name);
-
-    })
+      console.log('hello ', name);
+    });
+  }
+  showDropDown(){
+    this.showDropDownBanner = !this.showDropDownBanner;
   }
 }
