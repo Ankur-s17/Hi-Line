@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TabsComponent implements OnInit {
   selectedTab: any;
   tabsList = ['inventory log', 'add inventory', 'return inventory'];
+  
 
   ngOnInit(): void {
     this.selectedTab = this.tabsList[0];  

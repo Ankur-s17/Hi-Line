@@ -1,0 +1,43 @@
+.profile_banner {
+  position: absolute;
+  height: 78px;
+  width: 191px;
+  background-color: $lightTertiary;
+  border: 1px solid $secondaryColor;
+  right: 47px;
+  top: -36px;
+  z-index: 1;
+  .banner_section {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 16px;
+    gap: 24px;
+    .banner_icon {
+      height: 18px;
+      width: 16px;
+
+      .profile_icon {
+        background-image: url("../icons/PlayerSettings\(EF58\).svg");
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100%;
+      }
+      .logout_icon {
+        background-image: url("../icons/ReplyMirrored\(EE35\).svg");
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100%;
+      }
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+.hover_banner:hover {
+  background: #e5eef5;
+}

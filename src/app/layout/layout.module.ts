@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { ProfileBannerComponent } from './profile-banner/profile-banner.component';
 
 
 @NgModule({
@@ -13,12 +14,13 @@ import { MainComponent } from './main/main.component';
     NavbarComponent,
     SideNavComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    ProfileBannerComponent
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    
-  ]
+  ],
+  // providers: [NavbarComponent]
 })
 export class LayoutModule { }

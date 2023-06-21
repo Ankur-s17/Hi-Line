@@ -43,10 +43,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
   .profile-logo {
     @include profileLogo;
-    .profile-image{
-        @include profileIcon;
+    .profile-image {
+      @include profileIcon;
     }
   }
   .profile-name {

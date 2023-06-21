@@ -18,5 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ResetPasswordComponent,
   ],
   imports: [CommonModule, OnboardingRoutingModule, ReactiveFormsModule],
+  // providers: [LoginComponent]
 })
 export class OnboardingModule {}
