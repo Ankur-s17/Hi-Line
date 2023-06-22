@@ -1,6 +1,11 @@
 <div class="area-manage">
   <h3>AREA MANAGEMENT</h3>
 
+  <!-- delete modal -->
+  <ng-container *ngIf="modal.showDeleteModal">
+    <app-modal-delete></app-modal-delete>
+  </ng-container>
+
   <table class="data_table">
     <thead class="table_head">
       <th style="border-left: 0; width: 770px">
@@ -27,7 +32,7 @@
         <td>
           <div class="actions">
             <div class="edit"></div>
-            <div class="delete"></div>
+            <div class="delete" (click)="modal.showDeleteModal = true"></div>
           </div>
         </td>
       </tr>

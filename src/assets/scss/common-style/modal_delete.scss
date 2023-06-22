@@ -42,4 +42,12 @@
   background-color: $lightTertiary !important;
   color: $secondaryColor !important;
   font-weight: 700 !important;
+  border-radius: 8px;
+}
+.delete_btn{
+  font-weight: 700 !important;
+  background-color: $secondaryColor !important;
+  color: $lightTertiary !important;
+  border-radius: 8px;
+  border: none;
 }

@@ -18,6 +18,4 @@ export class LogComponent {
     this.myService.setMyVariable(true);
   }
 
-  // this will delete modal
-  openDeleteModal() {}
 }
