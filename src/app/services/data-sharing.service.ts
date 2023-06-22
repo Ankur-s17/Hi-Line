@@ -12,6 +12,9 @@ export class DataSharingService {
   // user add modal
   showAddModal: boolean = false;
 
+  // Price add modal
+  showPriceModal: boolean = false;
+
   constructor() {}
   private dataSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 

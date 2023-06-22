@@ -8,8 +8,8 @@
   {
     "id": 2,
     "route": "/user-management",
-    "active": "/assets/sidenav_icons/Active_Group.svg",
-    "icon": "/assets/sidenav_icons/Inactive_Group.svg"
+    "active": "/assets/sidenav_icons/team_active.svg",
+    "icon": "/assets/sidenav_icons/team.svg"
   },
   {
     "id": 3,
