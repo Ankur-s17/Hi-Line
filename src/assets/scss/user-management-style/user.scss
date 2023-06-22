@@ -82,6 +82,9 @@
 }
 
 .user-add_btn {
-  margin-top: 16px;
   @include add_button;
+  margin-top: 16px;
+  button {
+    cursor: pointer;
+  }
 }

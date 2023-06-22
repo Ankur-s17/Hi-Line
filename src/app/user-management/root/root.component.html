@@ -1,2 +1,5 @@
 <app-users></app-users>
-<!-- <app-add-user></app-add-user> -->
+
+<ng-container *ngIf="modal.showAddModal">
+  <app-add-user></app-add-user>
+</ng-container>

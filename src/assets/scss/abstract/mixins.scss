@@ -53,7 +53,6 @@
     border-radius: 8px;
     border: none;
     padding: 9px 33px;
-    // height: 37px;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -61,3 +60,38 @@
     text-transform: uppercase;
   }
 }
+
+@mixin backgroundOpacity {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // cursor: pointer;
+}
+
+// form input styling
+@mixin inputLableStyle {
+  display: flex;
+  flex-direction: column;
+}
+@mixin labelStyle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-bottom: 4px;
+}
+@mixin inputStyle {
+  height: 38px;
+  text-indent: 10px;
+  border: 1px solid #231f20;
+  border-radius: 2px;
+  background: #ffffff;
+  outline: none;
+}
+

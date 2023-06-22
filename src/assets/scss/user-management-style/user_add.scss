@@ -1,17 +1,49 @@
 .layout {
-  //   opacity: 0.8;
   position: relative;
 }
 
-.add_container {
-  @include displayCenter3;
-  // top: 0;
-  opacity: 1;
-  .addUser {
-    position: absolute;
-    // opacity: 1 !important;
-    height: 400px;
-    width: 400px;
-    background-color: red;
+.add_modal_container {
+  @include backgroundOpacity;
+  .form_outer {
+    padding: 32px;
+    background-color: $lightTertiary;
+    box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
+    h3 {
+      padding-bottom: 13px;
+    }
+    .form_container {
+      background-color: $mediumTertiary;
+      box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
+      .user_add_flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: 710px;
+      }
+    }
+  }
+  .input_style {
+    @include inputLableStyle;
+    padding-top: 16px;
+    padding-left: 16px;
+    label {
+      @include labelStyle;
+    }
+    input {
+      @include inputStyle;
+      width: 325px;
+      height: 30px;
+    }
+  }
+  .user_add_button {
+    @include add_button;
+    display: flex;
+    justify-content: end;
+    margin-right: 16px;
+    padding-bottom: 16px;
+    margin-top: 40px;
+
+    button {
+      cursor: pointer;
+    }
   }
 }

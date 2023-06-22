@@ -6,8 +6,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataSharingService {
 
-  // variable for delete modal
+  // delete modal
   showDeleteModal: boolean = false;
+
+  // user add modal
+  showAddModal: boolean = false;
 
   constructor() {}
   private dataSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
