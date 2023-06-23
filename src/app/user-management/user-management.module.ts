@@ -5,13 +5,15 @@ import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { RootComponent } from './root/root.component';
 import { SharedModule } from '../shared/shared.module';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
   declarations: [
     UsersComponent,
     AddUserComponent,
-    RootComponent
+    RootComponent,
+    EditUserComponent
   ],
   imports: [
     CommonModule,

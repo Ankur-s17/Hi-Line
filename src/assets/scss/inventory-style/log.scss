@@ -107,9 +107,11 @@ tr:nth-child(odd) {
   .edit {
     @include tableActions;
     background-image: url("../../icons/Edit.svg");
+    cursor: pointer;
   }
   .delete {
     @include tableActions;
     background-image: url("../../icons/Delete.svg");
+    cursor: pointer;
   }
 }

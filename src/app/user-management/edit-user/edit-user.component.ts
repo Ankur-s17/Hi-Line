@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 
 @Component({
-  selector: 'app-add-price-part',
-  templateUrl: './add-price-part.component.html',
-  styleUrls: ['./add-price-part.component.scss'],
+  selector: 'app-edit-user',
+  templateUrl: './edit-user.component.html',
+  styleUrls: ['./edit-user.component.scss'],
 })
-export class AddPricePartComponent {
+export class EditUserComponent {
   constructor(public modal: DataSharingService) {}
 }

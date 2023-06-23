@@ -9,8 +9,9 @@ export class DataSharingService {
   // delete modal
   showDeleteModal: boolean = false;
 
-  // user add modal
+  // user Add and Edit modal
   showAddModal: boolean = false;
+  showEditModal: boolean = false;
 
   // Price add modal
   showPriceModal: boolean = false;
