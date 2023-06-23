@@ -13,11 +13,13 @@ export class DataSharingService {
   showAddModal: boolean = false;
   showEditModal: boolean = false;
 
-  // Price add modal
+  // Parts Add and Edit modal
   showPriceModal: boolean = false;
+  showPartEditModal: boolean = false;
 
-  // Area add modal
+  // Area Add and Edit modal
   showAreaModal: boolean = false;
+  showAreaEditModal: boolean = false;
 
   constructor() {}
   private dataSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);

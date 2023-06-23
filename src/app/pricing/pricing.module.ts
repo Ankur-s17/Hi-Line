@@ -5,9 +5,10 @@ import { PriceManagementComponent } from './price-management/price-management.co
 import { RootComponent } from './root/root.component';
 import { SharedModule } from '../shared/shared.module';
 import { AddPricePartComponent } from './add-price-part/add-price-part.component';
+import { EditPartComponent } from './edit-part/edit-part.component';
 
 @NgModule({
-  declarations: [PriceManagementComponent, RootComponent, AddPricePartComponent],
+  declarations: [PriceManagementComponent, RootComponent, AddPricePartComponent, EditPartComponent],
   imports: [CommonModule, PricingRoutingModule, SharedModule],
 })
 export class PricingModule {}
