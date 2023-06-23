@@ -22,5 +22,8 @@
   .pricing_buttons {
     @include add_button;
     margin-top: 20px;
+    button{
+      cursor: pointer;
+    }
   }
 }

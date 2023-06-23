@@ -4,9 +4,10 @@ import { AreaRoutingModule } from './area-routing.module';
 import { AreaManagementComponent } from './area-management/area-management.component';
 import { RootComponent } from './root/root.component';
 import { SharedModule } from '../shared/shared.module';
+import { AddAreaComponent } from './add-area/add-area.component';
 
 @NgModule({
-  declarations: [AreaManagementComponent, RootComponent],
+  declarations: [AreaManagementComponent, RootComponent, AddAreaComponent],
   imports: [CommonModule, AreaRoutingModule, SharedModule],
 })
 export class AreaModule {}

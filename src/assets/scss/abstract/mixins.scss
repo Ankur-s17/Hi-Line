@@ -72,7 +72,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // cursor: pointer;
 }
 
 // form input styling
@@ -95,3 +94,19 @@
   outline: none;
 }
 
+// modal form header
+@mixin formHeadFlex {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin crossWrapper{
+  height: 16px;
+  width: 16px;
+}
+@mixin crossIcon{
+  background-image: url("../../icons/ChromeClose\(E8BB\).svg");
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  cursor: pointer;
+}

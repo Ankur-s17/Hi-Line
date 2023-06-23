@@ -1,0 +1,19 @@
+.add_area{
+    input{
+        width: 670px !important;
+    }
+}
+
+.flex_modal_head{
+    @include formHeadFlex;
+    .cross_wrapper{
+        @include crossWrapper;
+        .cross_icon{
+            @include crossIcon;
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+}
