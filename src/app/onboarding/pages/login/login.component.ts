@@ -10,13 +10,11 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-
   constructor(
     private route: Router,
     private loginService: LoginService,
     private dataSharingService: DataSharingService
   ) {}
-
 
   loginForm = new FormGroup({
     company_code: new FormControl('', [Validators.required]),
@@ -33,15 +31,11 @@ export class LoginComponent {
     this.loginService.onLogin(this.loginForm.value).subscribe((res) => {
       // debugger
       console.log('response', res);
-      // console.log('admin name', res.data.name);
-      // const adminName = res.data.name;
-      // this.dataSharingService.setData(adminName);
-
       if (res.response_code === 200) {
         localStorage.setItem('token', res.data.access_token);
+        this.route.navigate(['/inventory']);
       }
     });
-    this.route.navigate(['/inventory']);
   }
 
   // Login getters function

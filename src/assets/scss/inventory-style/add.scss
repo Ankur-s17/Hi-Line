@@ -19,6 +19,9 @@
       @include inputStyle;
       width: 357px;
     }
+    .ng-invalid.ng-touched:not(form) {
+      border: 1px solid red;
+    }
   }
 }
 .add_button {
@@ -26,8 +29,15 @@
   display: flex;
   justify-content: end;
   margin-top: 40px;
-  button {
+  button:disabled {
     cursor: pointer;
     opacity: 0.5;
+  }
+}
+
+.error_msg {
+  span {
+    color: $primaryColor;
+    font-size: 12px;
   }
 }
