@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { environment } from '../environments/environment';
 import { UserManagementModule } from './user-management/user-management.module';
 import { PricingModule } from './pricing/pricing.module';
+import { ProfileSettingModule } from './profile-setting/profile-setting.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { PricingModule } from './pricing/pricing.module';
     SharedModule,
     UserManagementModule,
     PricingModule,
+    ProfileSettingModule
   ],
 
   providers: [

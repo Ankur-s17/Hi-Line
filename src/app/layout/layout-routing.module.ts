@@ -36,6 +36,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('../tools/tools.module').then((m) => m.ToolsModule),
       },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../profile-setting/profile-setting.module').then(
+            (m) => m.ProfileSettingModule
+          ),
+      },
     ],
   },
 ];
