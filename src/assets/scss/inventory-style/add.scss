@@ -20,7 +20,7 @@
       width: 357px;
     }
     .ng-invalid.ng-touched:not(form) {
-      border: 1px solid red;
+      border: 1px solid #EB5757;
     }
   }
 }
@@ -37,7 +37,11 @@
 
 .error_msg {
   span {
-    color: $primaryColor;
+    color: #EB5757;
     font-size: 12px;
   }
+}
+
+.error{
+  color: #EB5757;
 }

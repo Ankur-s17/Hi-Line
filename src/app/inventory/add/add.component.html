@@ -5,7 +5,13 @@
 >
   <div class="inventory_form_flex">
     <div class="inventory_input">
-      <label for="">Job Number*</label>
+      <label
+        for=""
+        [ngClass]="{
+          error: job_number && job_number.invalid && job_number.touched
+        }"
+        >Job Number*</label
+      >
       <input
         type="text"
         placeholder="Enter Number"
@@ -20,7 +26,13 @@
     </div>
 
     <div class="inventory_input">
-      <label for="">Job Description*</label>
+      <label
+        for=""
+        [ngClass]="{
+          error: job_desc && job_desc.invalid && job_desc.touched
+        }"
+        >Job Description*</label
+      >
       <input type="text" placeholder="Enter text" formControlName="job_desc" />
       <div
         class="error_msg"
@@ -29,25 +41,34 @@
         <span>Field is required</span>
       </div>
     </div>
-    
+
     <div class="inventory_input">
-      <label for="">Area</label>
-      <input type="text" placeholder="Select" formControlName="area" />
-      <div
-        class="error_msg"
-        *ngIf="area && area.invalid && area.touched"
+      <label
+        for=""
+        [ngClass]="{
+          error: area && area.invalid && area.touched
+        }"
+        >Area</label
       >
+      <input type="text" placeholder="Select" formControlName="area" />
+      <div class="error_msg" *ngIf="area && area.invalid && area.touched">
         <span>Field is required</span>
       </div>
     </div>
     <div class="inventory_input">
-      <label for="">Part Number</label>
+      <label
+        for=""
+        [ngClass]="{
+          error: part_number && part_number.invalid && part_number.touched
+        }"
+        >Part Number</label
+      >
       <input
         type="text"
         placeholder="Enter Number"
         formControlName="part_number"
       />
-        <div
+      <div
         class="error_msg"
         *ngIf="part_number && part_number.invalid && part_number.touched"
       >
@@ -55,7 +76,13 @@
       </div>
     </div>
     <div class="inventory_input">
-      <label for="">Part Description</label>
+      <label
+        for=""
+        [ngClass]="{
+          error: part_desc && part_desc.invalid && part_desc.touched
+        }"
+        >Part Description</label
+      >
       <input
         type="text"
         placeholder="Enter Description"
@@ -69,7 +96,13 @@
       </div>
     </div>
     <div class="inventory_input">
-      <label for="">Quantity</label>
+      <label
+        for=""
+        [ngClass]="{
+          error: quantity && quantity.invalid && quantity.touched
+        }"
+        >Quantity</label
+      >
       <input
         type="text"
         placeholder="Enter Number"

@@ -1,33 +1,122 @@
-<form class="inventory_form">
+<form
+  [formGroup]="inventoryReturnForm"
+  (ngSubmit)="handleReturnInventoryForm()"
+  class="inventory_form"
+>
   <div class="inventory_form_flex">
     <div class="inventory_input">
-      <label for="">Job Number*</label>
-      <input type="text" placeholder="Enter Number" />
+      <label
+        for=""
+        [ngClass]="{
+          error: job_number && job_number.invalid && job_number.touched
+        }"
+        >Job Number*</label
+      >
+      <input
+        type="text"
+        placeholder="Enter Number"
+        formControlName="job_number"
+      />
+      <div
+        class="error_msg"
+        *ngIf="job_number && job_number.invalid && job_number.touched"
+      >
+        <span>Field is required</span>
+      </div>
     </div>
 
     <div class="inventory_input">
-      <label for="">Job Description*</label>
-      <input type="text" placeholder="Enter text" />
+      <label
+        for=""
+        [ngClass]="{
+          error: job_desc && job_desc.invalid && job_desc.touched
+        }"
+        >Job Description*</label
+      >
+      <input type="text" placeholder="Enter text" formControlName="job_desc" />
+      <div
+        class="error_msg"
+        *ngIf="job_desc && job_desc.invalid && job_desc.touched"
+      >
+        <span>Field is required</span>
+      </div>
     </div>
     <div class="inventory_input">
-      <label for="">Area</label>
-      <input type="text" placeholder="Select" />
+      <label
+        for=""
+        [ngClass]="{
+          error: area && area.invalid && area.touched
+        }"
+        >Area</label
+      >
+      <input type="text" placeholder="Select" formControlName="area" />
+      <div class="error_msg" *ngIf="area && area.invalid && area.touched">
+        <span>Field is required</span>
+      </div>
     </div>
     <div class="inventory_input">
-      <label for="">Part Number</label>
-      <input type="text" placeholder="Enter Number" />
+      <label
+        for=""
+        [ngClass]="{
+          error: part_number && part_number.invalid && part_number.touched
+        }"
+        >Part Number</label
+      >
+      <input
+        type="text"
+        placeholder="Enter Number"
+        formControlName="part_number"
+      />
+      <div
+        class="error_msg"
+        *ngIf="part_number && part_number.invalid && part_number.touched"
+      >
+        <span>Field is required</span>
+      </div>
     </div>
     <div class="inventory_input">
-      <label for="">Part Description</label>
-      <input type="text" placeholder="Enter Description" />
+      <label
+        for=""
+        [ngClass]="{
+          error: part_desc && part_desc.invalid && part_desc.touched
+        }"
+        >Part Description</label
+      >
+      <input
+        type="text"
+        placeholder="Enter Description"
+        formControlName="part_desc"
+      />
+      <div
+        class="error_msg"
+        *ngIf="part_desc && part_desc.invalid && part_desc.touched"
+      >
+        <span>Field is required</span>
+      </div>
     </div>
     <div class="inventory_input">
-      <label for="">Quantity</label>
-      <input type="text" placeholder="Enter Number" />
+      <label
+        for=""
+        [ngClass]="{
+          error: quantity && quantity.invalid && quantity.touched
+        }"
+        >Quantity</label
+      >
+      <input
+        type="text"
+        placeholder="Enter Number"
+        formControlName="quantity"
+      />
+      <div
+        class="error_msg"
+        *ngIf="quantity && quantity.invalid && quantity.touched"
+      >
+        <span>Field is required</span>
+      </div>
     </div>
   </div>
 
   <div class="add_button">
-    <button>Return</button>
+    <button [disabled]="!inventoryReturnForm.valid">Return</button>
   </div>
 </form>
