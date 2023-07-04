@@ -18,7 +18,7 @@
     <!-- <tr> -->
     <th style="border-left: 0">
       <div class="flex_thead">
-        <input type="checkbox" />Job#
+        <input type="checkbox" (change)="handleCheckBox($event)" />Job#
         <div class="sort_up_down"></div>
       </div>
     </th>
@@ -47,7 +47,7 @@
   <tbody class="table_body">
     <tr *ngFor="let data of inventoryTableData">
       <td>
-        <div class="flex_tbody"><input type="checkbox" />{{ data.jobId }}</div>
+        <div class="flex_tbody"><input type="checkbox" [checked]="check" />{{ data.jobId }}</div>
       </td>
       <td>{{ data.jobDesc }}</td>
       <td>{{ data.date }}</td>

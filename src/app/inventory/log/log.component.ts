@@ -15,7 +15,7 @@ export class LogComponent implements OnInit {
     private inventoryService: InventoryLogService,
     public modal: DataSharingService
   ) {}
-  
+
   ngOnInit(): void {
     this.getInventoryLog();
   }
@@ -31,5 +31,15 @@ export class LogComponent implements OnInit {
       this.inventoryTableData = result;
       // console.log(this.inventoryTableData);
     });
+  }
+
+  // check box handle
+  check: boolean = false;
+  handleCheckBox(event: any) {
+    if (event.target.checked == true) {
+      this.check = true;
+    } else {
+      this.check = false;
+    }
   }
 }
