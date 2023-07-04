@@ -1,6 +1,6 @@
 <form
   [formGroup]="inventoryAddForm"
-  (ngSubmit)="handleAddInventoryForm()"
+  (ngSubmit)="handleAddInventoryForm(inventoryAddForm.value)"
   class="inventory_form"
 >
   <div class="inventory_form_flex">
@@ -15,7 +15,7 @@
       <input
         type="text"
         placeholder="Enter Number"
-        formControlName="job_number"
+        formControlName="jobId"
       />
       <div
         class="error_msg"
@@ -33,7 +33,7 @@
         }"
         >Job Description*</label
       >
-      <input type="text" placeholder="Enter text" formControlName="job_desc" />
+      <input type="text" placeholder="Enter text" formControlName="jobDesc" />
       <div
         class="error_msg"
         *ngIf="job_desc && job_desc.invalid && job_desc.touched"
@@ -106,7 +106,7 @@
       <input
         type="text"
         placeholder="Enter Number"
-        formControlName="quantity"
+        formControlName="totalQuantity"
       />
       <div
         class="error_msg"

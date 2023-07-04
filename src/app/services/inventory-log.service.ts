@@ -7,8 +7,14 @@ import { Injectable } from '@angular/core';
 export class InventoryLogService {
   constructor(private http: HttpClient) {}
 
-  // getting Inventory Log Table data throgh
+  // Inventory Log get API
   getInvtLogData() {
-    return this.http.get('/assets/services/inventorylog.json');
+    return this.http.get('http://localhost:3000/inventory_log');
+  }
+
+  // Inventory add using POST API
+  addInvtData(data: any) {
+    // debugger
+    return this.http.post('http://localhost:3000/inventory_log', data);
   }
 }
