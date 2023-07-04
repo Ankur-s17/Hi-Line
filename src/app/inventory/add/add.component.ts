@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { InventoryLogService } from 'src/app/services/inventory-log.service';
 
 @Component({
@@ -21,7 +22,6 @@ export class AddComponent {
 
   // handling add inventory form
   handleAddInventoryForm(data: any) {
-    // console.log(data);
     this.inventoryService.addInvtData(data).subscribe((resp) => {
       console.log(resp);
     });
