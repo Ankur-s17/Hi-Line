@@ -47,7 +47,9 @@
   <tbody class="table_body">
     <tr *ngFor="let data of inventoryTableData">
       <td>
-        <div class="flex_tbody"><input type="checkbox" [checked]="check" />{{ data.jobId }}</div>
+        <div class="flex_tbody">
+          <input type="checkbox" [checked]="check" />{{ data.jobId }}
+        </div>
       </td>
       <td>{{ data.jobDesc }}</td>
       <td>07/07/23</td>
@@ -61,7 +63,11 @@
       <td>
         <div class="actions">
           <div class="print"></div>
-          <div class="edit" (click)="updateVariable()"></div>
+          <div
+            class="edit"
+            [routerLink]="['edit']"
+            [queryParams]="{ prop: 'xxx' }"
+          ></div>
           <div class="delete" (click)="modal.showDeleteModal = true"></div>
         </div>
       </td>

@@ -1,22 +1,25 @@
 <div class="tabs_container">
   <ul>
     <li *ngFor="let tab of tabsList">
-      <a (click)="showTabComponent(tab)" [ngClass]="selectedTab === tab ? 'active_tab' : ''">{{ tab | uppercase }}</a>
+      <a
+        (click)="showTabComponent(tab)"
+        [ngClass]="selectedTab === tab ? 'active_tab' : ''"
+        >{{ tab | uppercase }}</a
+      >
     </li>
   </ul>
 </div>
 
-<div class="tab_component">  
-
-<ng-container *ngIf="selectedTab === 'inventory log'">
+<div class="tab_component">
+  <ng-container *ngIf="selectedTab === 'inventory log'">
     <app-log></app-log>
-</ng-container>
+  </ng-container>
 
-<ng-container *ngIf="selectedTab === 'add inventory'">
+  <ng-container *ngIf="selectedTab === 'add inventory'">
     <app-add></app-add>
-</ng-container>
+  </ng-container>
 
-<ng-container *ngIf="selectedTab === 'return inventory'">
+  <ng-container *ngIf="selectedTab === 'return inventory'">
     <app-return></app-return>
-</ng-container>
+  </ng-container>
 </div>

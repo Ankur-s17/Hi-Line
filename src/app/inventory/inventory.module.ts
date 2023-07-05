@@ -8,6 +8,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { SharedModule } from '../shared/shared.module';
 import { EditDescriptionComponent } from './edit-description/edit-description.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReturnComponent,
     TabsComponent,
     EditDescriptionComponent,
+    IndexComponent,
   ],
   imports: [
     CommonModule,

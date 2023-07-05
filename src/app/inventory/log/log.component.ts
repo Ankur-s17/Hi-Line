@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 import { InventoryEditService } from 'src/app/services/inventory-edit.service';
 import { InventoryLogService } from 'src/app/services/inventory-log.service';
@@ -13,16 +14,21 @@ export class LogComponent implements OnInit {
   constructor(
     private myService: InventoryEditService,
     private inventoryService: InventoryLogService,
-    public modal: DataSharingService
+    public modal: DataSharingService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.getInventoryLog();
   }
 
-  updateVariable(): void {
-    this.myService.setMyVariable(true);
-  }
+  // updateVariable(): void {
+  //   this.myService.setMyVariable(true);
+  // }
+  // navigateToEdit(){
+  //   console.log("edit desc");
+  //   this.router.navigate(['']);    
+  // }
 
   // calling Inventory log table service
   inventoryTableData: any;
