@@ -1,0 +1,88 @@
+.edit-j {
+  // margin: 80px 23px 18px 80px;
+  margin-top: 190px;
+  // background-color: beige;
+  width: 95%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 2.5% 0 0 2.5%;
+
+  .right-left-arrow {
+    width: 9px;
+    margin-left: 50px;
+    margin-top: 65px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url("../../icons/Right-left\ Arrow.svg");
+    // background-image: url("../icons/Right-left\ Arrow.svg");
+    background-size: 100% 100%;
+  }
+
+  h5 {
+    font-weight: 700;
+    margin-top: 65px;
+    font-size: 17px;
+    letter-spacing: -0.016em;
+    color: black;
+    opacity: 0.5;
+  }
+}
+
+.edit-job-d {
+  @extend .edit-j;
+  height: 35% !important;
+  // margin-top: 5%;
+  // background-color: blue;
+  // height: 30%;
+}
+
+.edit-job-form {
+  box-shadow: 0px 4px 4px rgba(192, 192, 192, 0.5);
+  background-color: $mediumTertiary;
+
+  width: 100%;
+  padding: 2%;
+  margin-left: 40px;
+  .edit-j-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    input {
+      width: 100%;
+      height: 28px;
+      border: 1px solid black;
+      text-indent: 5px;
+      outline: none;
+
+      //   margin-left: 2%;
+    }
+
+    label {
+      //   margin-left: 2%;
+      font-size: 16px;
+      font-weight: 400px;
+      color: black;
+    }
+  }
+}
+
+.add-inventory-submit {
+  display: flex;
+  justify-content: end;
+  button {
+    background: $secondaryColor;
+    color: $lightTertiary;
+    border-radius: 8px;
+    border: none;
+    padding: 9px 33px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2%;
+  }
+}

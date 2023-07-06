@@ -1,1 +1,20 @@
-<p>edit-description works!</p>
+<div class="edit-j">
+  <div class="right-left-arrow" routerLink="/inventory"></div>
+  <h5>Edit Job# - 123456</h5>
+</div>
+
+<div class="edit-job-d">
+  <form class="edit-job-form">
+    <div class="edit-j-desc">
+      <label for="">Job Description</label>
+
+      <input type="text" formControlName="job_description" />
+
+      <!-- <span class="err-msg">Field is required </span> -->
+    </div>
+
+    <div class="add-inventory-submit">
+      <button class="btn" type="submit">Update</button>
+    </div>
+  </form>
+</div>
