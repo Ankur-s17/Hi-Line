@@ -4,11 +4,19 @@
 </div>
 
 <div class="edit-job-d">
-  <form class="edit-job-form">
+  <form
+    [formGroup]="editDesc"
+    (ngSubmit)="UpdateJobDesc(editDesc.value)"
+    class="edit-job-form"
+  >
     <div class="edit-j-desc">
       <label for="">Job Description</label>
 
-      <input type="text" formControlName="job_description" />
+      <input
+        type="text"
+        formControlName="jobDesc"
+        ngModel="{{ jobDescription?.jobDesc }}"
+      />
 
       <!-- <span class="err-msg">Field is required </span> -->
     </div>

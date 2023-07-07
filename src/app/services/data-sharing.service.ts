@@ -21,6 +21,13 @@ export class DataSharingService {
   showAreaModal: boolean = false;
   showAreaEditModal: boolean = false;
 
+  // get dynamic ID in inventory edit component
+  private sharedData: any;
+
+  // setData(data: any) {
+  //   this.sharedData = data;
+  // }
+
   constructor() {}
   private dataSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 

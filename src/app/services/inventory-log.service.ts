@@ -17,4 +17,17 @@ export class InventoryLogService {
     // debugger
     return this.http.post('http://localhost:3000/inventory_log', data);
   }
+
+  // Inventory delete
+  deleteInvtData(id: any) {
+    return this.http.delete(`http://localhost:3000/inventory_log/${id}`);
+  }
+
+  // Inventory Update
+  getUpdateInvtId(id: any) {
+    return this.http.get(`http://localhost:3000/inventory_log/${id}`);
+  }
+  updateDesc(data: any) {
+    return this.http.put(`http://localhost:3000/inventory_log/${data.id}`, data);    
+  }
 }

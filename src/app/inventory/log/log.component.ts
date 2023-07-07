@@ -10,7 +10,7 @@ import { InventoryLogService } from 'src/app/services/inventory-log.service';
   styleUrls: ['./log.component.scss'],
 })
 export class LogComponent implements OnInit {
-  // showDeleteModal: boolean = false;
+  showDeleteModal: boolean = false;
   constructor(
     private myService: InventoryEditService,
     private inventoryService: InventoryLogService,
@@ -22,12 +22,15 @@ export class LogComponent implements OnInit {
     this.getInventoryLog();
   }
 
+  setData(data: any) {
+    console.log(data);
+  }
   // updateVariable(): void {
   //   this.myService.setMyVariable(true);
   // }
   // navigateToEdit(){
   //   console.log("edit desc");
-  //   this.router.navigate(['']);    
+  //   this.router.navigate(['']);
   // }
 
   // calling Inventory log table service
@@ -47,5 +50,25 @@ export class LogComponent implements OnInit {
     } else {
       this.check = false;
     }
+  }
+
+  deleteId: any;
+  openDeleteModalId(id: any) {
+    console.log(id);
+    this.deleteId = id;
+    this.modal.showDeleteModal = true;
+  }
+
+  removeData(id: any) {
+    this.inventoryService.deleteInvtData(id).subscribe((result) => {
+      console.log(result);
+      this.getInventoryLog();
+
+    });
+  }
+
+  closeModal(event: boolean) {
+    // console.log();
+    this.showDeleteModal = event;
   }
 }

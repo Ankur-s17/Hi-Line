@@ -33,9 +33,6 @@
 .edit-job-d {
   @extend .edit-j;
   height: 35% !important;
-  // margin-top: 5%;
-  // background-color: blue;
-  // height: 30%;
 }
 
 .edit-job-form {
@@ -56,12 +53,9 @@
       border: 1px solid black;
       text-indent: 5px;
       outline: none;
-
-      //   margin-left: 2%;
     }
 
     label {
-      //   margin-left: 2%;
       font-size: 16px;
       font-weight: 400px;
       color: black;

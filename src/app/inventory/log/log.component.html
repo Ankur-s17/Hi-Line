@@ -6,7 +6,11 @@
     <app-search></app-search>
 
     <ng-container *ngIf="modal.showDeleteModal">
-      <app-modal-delete></app-modal-delete>
+      <app-modal-delete
+        [deleteId]="deleteId"
+        (closeModal)="closeModal($event)"
+        (removeData)="removeData($event)"
+      ></app-modal-delete>
     </ng-container>
 
     <button>download data <span class="download_dropdown"></span></button>
@@ -63,12 +67,14 @@
       <td>
         <div class="actions">
           <div class="print"></div>
+          <!-- [routerLink]="['edit/{{data.id}}']" -->
           <div
             class="edit"
             [routerLink]="['edit']"
-            [queryParams]="{ prop: 'xxx' }"
+            [queryParams]="{ prop: data.id }"
+            (click)="setData(data.jobId)"
           ></div>
-          <div class="delete" (click)="modal.showDeleteModal = true"></div>
+          <div class="delete" (click)="openDeleteModalId(data.id)"></div>
         </div>
       </td>
     </tr>
