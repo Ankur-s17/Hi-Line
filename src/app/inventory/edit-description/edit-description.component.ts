@@ -11,7 +11,8 @@ import { InventoryLogService } from 'src/app/services/inventory-log.service';
 export class EditDescriptionComponent {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private updateJob: InventoryLogService
+    private updateJob: InventoryLogService,
+    private route: Router
   ) {}
 
   jobDescription: any;
@@ -39,14 +40,15 @@ export class EditDescriptionComponent {
   }
 
   UpdateJobDesc(data: any) {
-    // console.log(description);
+    console.log(data);
     if (this.jobDescription) {
-      data.id == this.jobDescription.id;
+      data.id = this.jobDescription.id;
     }
     console.log('edit desc', this.jobDescription);
-
+    this.jobDescription.jobDesc = data.jobDesc;
     this.updateJob.updateDesc(this.jobDescription).subscribe((result) => {
       console.log('updated result', result);
     });
+    this.route.navigate(['inventory']);
   }
 }

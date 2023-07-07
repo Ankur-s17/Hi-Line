@@ -28,6 +28,9 @@ export class InventoryLogService {
     return this.http.get(`http://localhost:3000/inventory_log/${id}`);
   }
   updateDesc(data: any) {
-    return this.http.put(`http://localhost:3000/inventory_log/${data.id}`, data);    
+    console.log("serdata ",data);
+    
+    return this.http.put(
+      `http://localhost:3000/inventory_log/${data.id}`, data);
   }
 }
