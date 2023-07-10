@@ -49,166 +49,30 @@
     </thead>
 
     <tbody class="table_body">
-      <tr>
+      <tr *ngFor="let data of userMangementData">
         <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
+          <div class="flex_tbody"><input type="checkbox" />{{data.employeeId}}</div>
         </td>
         <td>
           <div class="flex_tbody">
             <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
+            {{data.employeeName}}
           </div>
         </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
+        <td>{{data.email}}</td>
+        <td>{{data.role}}</td>
         <td>
           <div class="flex_tbody">
-            <span>********</span>
+            <span>{{data.password}}</span>
             <div class="visibility"><div class="visibility_icon"></div></div>
           </div>
         </td>
         <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
+        <td class="reset_color">{{data.passwordReset}}</td>
         <td>
           <div class="actions">
             <div class="edit" (click)="modal.showEditModal = true"></div>
             <div class="delete" (click)="modal.showDeleteModal = true"></div>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
-        </td>
-        <td>
-          <div class="flex_tbody">
-            <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
-          </div>
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-          <div class="flex_tbody">
-            <span>********</span>
-            <div class="visibility"><div class="visibility_icon"></div></div>
-          </div>
-        </td>
-        <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
-        <td>
-          <div class="actions">
-            <div class="edit"></div>
-            <div class="delete"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
-        </td>
-        <td>
-          <div class="flex_tbody">
-            <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
-          </div>
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-          <div class="flex_tbody">
-            <span>********</span>
-            <div class="visibility"><div class="visibility_icon"></div></div>
-          </div>
-        </td>
-        <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
-        <td>
-          <div class="actions">
-            <div class="edit"></div>
-            <div class="delete"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
-        </td>
-        <td>
-          <div class="flex_tbody">
-            <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
-          </div>
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-          <div class="flex_tbody">
-            <span>********</span>
-            <div class="visibility"><div class="visibility_icon"></div></div>
-          </div>
-        </td>
-        <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
-        <td>
-          <div class="actions">
-            <div class="edit"></div>
-            <div class="delete"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
-        </td>
-        <td>
-          <div class="flex_tbody">
-            <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
-          </div>
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-          <div class="flex_tbody">
-            <span>********</span>
-            <div class="visibility"><div class="visibility_icon"></div></div>
-          </div>
-        </td>
-        <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
-        <td>
-          <div class="actions">
-            <div class="edit"></div>
-            <div class="delete"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="flex_tbody"><input type="checkbox" />12345</div>
-        </td>
-        <td>
-          <div class="flex_tbody">
-            <div class="profile-logo"><div class="profile-image"></div></div>
-            12345
-          </div>
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-          <div class="flex_tbody">
-            <span>********</span>
-            <div class="visibility"><div class="visibility_icon"></div></div>
-          </div>
-        </td>
-        <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">Reset</td>
-        <td>
-          <div class="actions">
-            <div class="edit"></div>
-            <div class="delete"></div>
           </div>
         </td>
       </tr>

@@ -77,16 +77,19 @@ export class LogComponent implements OnInit {
   // auto suggestion search method
   searchInvtLog(query: any) {
     if (query) {
-      
+
       const result = query.target as HTMLInputElement;
       // console.log(result.value);
       this.inventoryService.autoSearch(result.value).subscribe((resp: any) => {
-        // console.log(resp);
+        console.log(resp);
         if (resp.length > 4) {
           resp.length = 4;
         }
         this.autoSuggestionResult = resp;
         this.inventoryTableData = resp;
+        if(resp.length < 1){
+          this.getInventoryLog();
+        }
       });
     }
   }
