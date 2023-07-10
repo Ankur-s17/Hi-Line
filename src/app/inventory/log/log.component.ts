@@ -11,6 +11,9 @@ import { InventoryLogService } from 'src/app/services/inventory-log.service';
 })
 export class LogComponent implements OnInit {
   showDeleteModal: boolean = false;
+  autoSuggestionResult: any;
+  showInvoiced: boolean = false;
+
   constructor(
     private myService: InventoryEditService,
     private inventoryService: InventoryLogService,
@@ -63,12 +66,52 @@ export class LogComponent implements OnInit {
     this.inventoryService.deleteInvtData(id).subscribe((result) => {
       console.log(result);
       this.getInventoryLog();
-
     });
   }
 
   closeModal(event: boolean) {
     // console.log();
     this.showDeleteModal = event;
+  }
+
+  // auto suggestion search method
+  searchInvtLog(query: any) {
+    if (query) {
+      
+      const result = query.target as HTMLInputElement;
+      // console.log(result.value);
+      this.inventoryService.autoSearch(result.value).subscribe((resp: any) => {
+        // console.log(resp);
+        if (resp.length > 4) {
+          resp.length = 4;
+        }
+        this.autoSuggestionResult = resp;
+        this.inventoryTableData = resp;
+      });
+    }
+  }
+  hideAutoSuggestion() {
+    this.autoSuggestionResult = undefined;
+  }
+
+  // openInvoiced(id: any) {
+  //   console.log(id);
+
+  //   // this.showInvoiced = !this.showInvoiced;
+  // }
+  toggleDropdown(index: any) {
+    index.showInvoiced = !index.showInvoiced;
+  }
+  showOpen(data: any) {
+    console.log(data);
+    data.invoiced = 'Open';
+    this.showInvoiced = false
+
+  }
+  showReOpen(data: any) {
+    data.invoiced = 'Re-open';
+  }
+  hideInvoiced() {
+    this.showInvoiced = false;
   }
 }

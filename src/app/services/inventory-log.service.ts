@@ -28,9 +28,16 @@ export class InventoryLogService {
     return this.http.get(`http://localhost:3000/inventory_log/${id}`);
   }
   updateDesc(data: any) {
-    console.log("serdata ",data);
-    
+    console.log('serdata ', data);
     return this.http.put(
-      `http://localhost:3000/inventory_log/${data.id}`, data);
+      `http://localhost:3000/inventory_log/${data.id}`,
+      data
+    );
   }
+
+  // Auto suggestion search API
+  autoSearch(query: any) {
+    return this.http.get(`http://localhost:3000/inventory_log?q=${query}`);
+  }
+  
 }
