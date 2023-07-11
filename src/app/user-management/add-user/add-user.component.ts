@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 
 @Component({
@@ -8,4 +9,16 @@ import { DataSharingService } from 'src/app/services/data-sharing.service';
 })
 export class AddUserComponent {
   constructor(public modal: DataSharingService) {}
+
+  userAddForm = new FormGroup({
+    employeeId: new FormControl(''),
+  });
+ 
+  hadleUserAddForm(data: any){   
+    console.log(data);    
+  }
+
+  get employeeId() {
+    return this.userAddForm.get('employeeId');
+  }
 }

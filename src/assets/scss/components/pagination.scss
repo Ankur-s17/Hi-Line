@@ -1,0 +1,52 @@
+.pagination_wrapper {
+  display: flex;
+  gap: 70px;
+  justify-content: end;
+
+  .pagination_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    span {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+    }
+    .pagination_dropdown_icon {
+      background-image: url("../../icons/Dropdown\ arrow\ \(2\).svg");
+      height: 8px;
+      width: 14px;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+  }
+
+  .pagination_right {
+    display: flex;
+    gap: 26px;
+    span {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+    }
+    .flex_arrow_icon {
+      display: flex;
+      gap: 30px;
+      .pagination_icon_left {
+        background-image: url("../../icons/Right-left\ Arrow\ \(1\).svg");
+        width: 10px;
+        height: 16.478px;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+
+      .pagination_icon_right {
+        background-image: url("../../icons/Right-left\ Arrow\ \(2\).svg");
+        width: 10px;
+        height: 16.478px;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}

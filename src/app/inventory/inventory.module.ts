@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { EditDescriptionComponent } from './edit-description/edit-description.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { IndexComponent } from './index/index.component';
     InventoryRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
 })
 export class InventoryModule {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 import { InventoryEditService } from 'src/app/services/inventory-edit.service';
@@ -10,6 +10,7 @@ import { InventoryLogService } from 'src/app/services/inventory-log.service';
   styleUrls: ['./log.component.scss'],
 })
 export class LogComponent implements OnInit {
+  
   showDeleteModal: boolean = false;
   autoSuggestionResult: any;
   showInvoiced: boolean = false;
@@ -38,10 +39,12 @@ export class LogComponent implements OnInit {
 
   // calling Inventory log table service
   inventoryTableData: any;
+  inventoryLength: any;
   getInventoryLog() {
     this.inventoryService.getInvtLogData().subscribe((result) => {
       this.inventoryTableData = result;
-      // console.log(this.inventoryTableData);
+      this.inventoryLength = this.inventoryTableData.length;
+      console.log("length of inventory",this.inventoryLength);
     });
   }
 
@@ -77,7 +80,6 @@ export class LogComponent implements OnInit {
   // auto suggestion search method
   searchInvtLog(query: any) {
     if (query) {
-
       const result = query.target as HTMLInputElement;
       // console.log(result.value);
       this.inventoryService.autoSearch(result.value).subscribe((resp: any) => {
@@ -87,9 +89,6 @@ export class LogComponent implements OnInit {
         }
         this.autoSuggestionResult = resp;
         this.inventoryTableData = resp;
-        if(resp.length < 1){
-          this.getInventoryLog();
-        }
       });
     }
   }
@@ -108,8 +107,7 @@ export class LogComponent implements OnInit {
   showOpen(data: any) {
     console.log(data);
     data.invoiced = 'Open';
-    this.showInvoiced = false
-
+    this.showInvoiced = false;
   }
   showReOpen(data: any) {
     data.invoiced = 'Re-open';
@@ -117,4 +115,5 @@ export class LogComponent implements OnInit {
   hideInvoiced() {
     this.showInvoiced = false;
   }
+
 }
