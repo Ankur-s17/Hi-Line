@@ -62,7 +62,7 @@
     <!-- </tr> -->
   </thead>
   <tbody class="table_body">
-    <tr *ngFor="let data of inventoryTableData; let i = index">
+    <tr *ngFor="let data of renderData; let i = index">
       <td>
         <div class="flex_tbody">
           <input type="checkbox" [checked]="check" />{{ data.jobId }}
@@ -104,4 +104,36 @@
   </tbody>
 </table>
 
-<app-pagination></app-pagination>
+<app-pagination
+  [inventoryLength]="inventoryLength"
+  [initialValue]="initialValue"
+  [finalValue]="finalValue"
+  [displayData]="displayData"
+  (abc)="receiveTable($event)"
+></app-pagination>
+
+<!-- pagination html -->
+<!-- <div class="pagination_wrapper">
+  <div class="pagination_left">
+    <span>Rows per page: 10</span>
+    <div class="pagination_dropdown_icon"></div>
+  </div>
+
+  <div class="pagination_right">
+    <span
+      >{{ initialValue + 1 }}-{{ finalValue }} of {{ inventoryLength }}</span
+    >
+    <div class="flex_arrow_icon">
+      <button
+        class="pagination_icon_left"
+        [disabled]="disablePrevBtn"
+        (click)="previousPageButton()"
+      ></button>
+      <button
+        class="pagination_icon_right"
+        [disabled]="disabledNextBtn"
+        (click)="nextPageButton()"
+      ></button>
+    </div>
+  </div>
+</div> -->

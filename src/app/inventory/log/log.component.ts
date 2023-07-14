@@ -10,7 +10,6 @@ import { InventoryLogService } from 'src/app/services/inventory-log.service';
   styleUrls: ['./log.component.scss'],
 })
 export class LogComponent implements OnInit {
-  
   showDeleteModal: boolean = false;
   autoSuggestionResult: any;
   showInvoiced: boolean = false;
@@ -29,23 +28,38 @@ export class LogComponent implements OnInit {
   setData(data: any) {
     console.log(data);
   }
-  // updateVariable(): void {
-  //   this.myService.setMyVariable(true);
-  // }
-  // navigateToEdit(){
-  //   console.log("edit desc");
-  //   this.router.navigate(['']);
-  // }
 
   // calling Inventory log table service
+  initialValue: any = 0;
+  finalValue: any = 5;
+
   inventoryTableData: any;
   inventoryLength: any;
+
+  displayData: any;
+  renderData: any;
+
   getInventoryLog() {
     this.inventoryService.getInvtLogData().subscribe((result) => {
       this.inventoryTableData = result;
+      this.displayData = this.inventoryTableData;
+      // this.renderData = this.inventoryTableData;
       this.inventoryLength = this.inventoryTableData.length;
-      console.log("length of inventory",this.inventoryLength);
+      if (this.inventoryLength > 5) {
+        this.renderData = this.displayData.slice(
+          this.initialValue,
+          this.finalValue
+        );
+      } else {
+        this.renderData = this.displayData.slice(this.initialValue);
+      }
+      console.log('length of inventory', this.inventoryLength);
     });
+  }
+
+  // pagination logic
+  receiveTable(data: any) {
+    this.renderData = data;
   }
 
   // check box handle
@@ -73,10 +87,10 @@ export class LogComponent implements OnInit {
   }
 
   closeModal(event: boolean) {
-    // console.log();
     this.showDeleteModal = event;
   }
 
+  
   // auto suggestion search method
   searchInvtLog(query: any) {
     if (query) {
@@ -96,11 +110,6 @@ export class LogComponent implements OnInit {
     this.autoSuggestionResult = undefined;
   }
 
-  // openInvoiced(id: any) {
-  //   console.log(id);
-
-  //   // this.showInvoiced = !this.showInvoiced;
-  // }
   toggleDropdown(index: any) {
     index.showInvoiced = !index.showInvoiced;
   }
@@ -115,5 +124,4 @@ export class LogComponent implements OnInit {
   hideInvoiced() {
     this.showInvoiced = false;
   }
-
 }

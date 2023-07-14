@@ -2,6 +2,7 @@
   display: flex;
   gap: 70px;
   justify-content: end;
+  margin-bottom: 70px;
 
   .pagination_left {
     display: flex;
@@ -38,6 +39,8 @@
         height: 16.478px;
         background-size: 100% 100%;
         cursor: pointer;
+        border: none;
+        background-color: transparent;
       }
 
       .pagination_icon_right {
@@ -46,6 +49,8 @@
         height: 16.478px;
         background-size: 100% 100%;
         cursor: pointer;
+        border: none;
+        background-color: transparent;
       }
     }
   }

@@ -5,10 +5,20 @@
   </div>
 
   <div class="pagination_right">
-    <span>1-10 of 100</span>
+    <span
+      >{{ initialValue + 1 }} - {{ finalValue }} of {{ inventoryLength }}</span
+    >
     <div class="flex_arrow_icon">
-      <div class="pagination_icon_left"></div>
-      <div class="pagination_icon_right"></div>
+      <button
+        class="pagination_icon_left"
+        (click)="previousPageButton()"
+        [disabled]="disablePrevBtn"
+      ></button>
+      <button
+        class="pagination_icon_right"
+        (click)="nextPageButton()"
+        [disabled]="disabledNextBtn"
+      ></button>
     </div>
   </div>
 </div>
