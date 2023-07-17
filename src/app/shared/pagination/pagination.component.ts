@@ -6,19 +6,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent implements OnInit {
-  @Input() inventoryLength: number;
+  @Input() TableLength: number;
   @Input() initialValue: number;
   @Input() finalValue: number;
   @Input() displayData: Array<any>;
-
   @Output() abc = new EventEmitter<any>();
 
   renderData: Array<any>;
 
-  // initialValue: any = 0;
-  // finalValue: any = 5;
-
-  disabledNextBtn: boolean = false;
+  @Input() disabledNextBtn: boolean = false;
   disablePrevBtn: boolean;
 
   ngOnInit(): void {
@@ -28,17 +24,17 @@ export class PaginationComponent implements OnInit {
   nextPageButton() {
     this.initialValue = this.finalValue;
     this.finalValue = this.finalValue + 5;
-    if (this.finalValue <= this.inventoryLength) {
+    if (this.finalValue <= this.TableLength) {
       this.renderData = this.displayData.slice(
         this.initialValue,
         this.finalValue
       );
       this.disablePrevBtn = false;
     } else {
-      this.finalValue = this.inventoryLength;
+      this.finalValue = this.TableLength;
       this.renderData = this.displayData.slice(
         this.initialValue,
-        this.inventoryLength
+        this.TableLength
       );
       this.disabledNextBtn = true;
     }

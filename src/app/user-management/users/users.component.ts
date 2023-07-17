@@ -9,6 +9,14 @@ import { UserManagementService } from 'src/app/services/user-management.service'
 })
 export class UsersComponent implements OnInit {
   userMangementData: any;
+  displayData: Array<any>;
+  renderUserData: Array<any>;
+  userDataLength: number;
+
+  initialValue: number = 0;
+  finalValue: number = 5;
+
+  disabledNextBtn: boolean = true;
 
   constructor(
     public modal: DataSharingService,
@@ -22,6 +30,21 @@ export class UsersComponent implements OnInit {
   getUserManagementData() {
     this.userData.userManagementData().subscribe((data) => {
       this.userMangementData = data;
+      this.displayData = this.userMangementData;
+      this.userDataLength = this.userMangementData.length;
+      if (this.userDataLength > 5) {
+        this.renderUserData = this.displayData.slice(
+          this.initialValue,
+          this.finalValue
+        );
+      } else {
+        this.finalValue = this.userDataLength;
+        this.renderUserData = this.displayData.slice(
+          this.initialValue,
+          this.finalValue
+        );
+        this.disabledNextBtn;
+      }
     });
   }
 }

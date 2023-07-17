@@ -49,26 +49,28 @@
     </thead>
 
     <tbody class="table_body">
-      <tr *ngFor="let data of userMangementData">
+      <tr *ngFor="let data of renderUserData">
         <td>
-          <div class="flex_tbody"><input type="checkbox" />{{data.employeeId}}</div>
+          <div class="flex_tbody">
+            <input type="checkbox" />{{ data.employeeId }}
+          </div>
         </td>
         <td>
           <div class="flex_tbody">
             <div class="profile-logo"><div class="profile-image"></div></div>
-            {{data.employeeName}}
+            {{ data.employeeName }}
           </div>
         </td>
-        <td>{{data.email}}</td>
-        <td>{{data.role}}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.role }}</td>
         <td>
           <div class="flex_tbody">
-            <span>{{data.password}}</span>
+            <span>{{ data.password }}</span>
             <div class="visibility"><div class="visibility_icon"></div></div>
           </div>
         </td>
         <td class="toggle_btn"><input type="checkbox" /></td>
-        <td class="reset_color">{{data.passwordReset}}</td>
+        <td class="reset_color">{{ data.passwordReset }}</td>
         <td>
           <div class="actions">
             <div class="edit" (click)="modal.showEditModal = true"></div>
@@ -79,7 +81,15 @@
     </tbody>
   </table>
 
-  <div class="user-add_btn" (click)="modal.showAddModal = true">
-    <button>Add</button>
+  <div class="paginationn_flex">
+    <div class="user-add_btn" (click)="modal.showAddModal = true">
+      <button>Add</button>
+    </div>
+    <app-pagination
+      [TableLength]="userDataLength"
+      [initialValue]="initialValue"
+      [finalValue]="finalValue"
+      [disabledNextBtn]="disabledNextBtn"
+    ></app-pagination>
   </div>
 </div>

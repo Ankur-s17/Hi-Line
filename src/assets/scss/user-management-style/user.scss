@@ -81,10 +81,14 @@
   }
 }
 
-.user-add_btn {
-  @include add_button;
-  margin-top: 16px;
-  button {
-    cursor: pointer;
+.paginationn_flex {
+  display: flex;
+  justify-content: space-between;
+  .user-add_btn {
+    @include add_button;
+    // margin-top: 14px;
+    button {
+      cursor: pointer;
+    }
   }
 }
